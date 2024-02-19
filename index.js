@@ -1,10 +1,16 @@
 function updateClock() {
+  const clock = document.getElementById("clock");
   const date = new Date();
   const hours = date.getHours().toString().padStart(2, 0);
   const minutes = date.getMinutes().toString().padStart(2, 0);
   const seconds = date.getSeconds().toString().padStart(2, 0);
   const timeString = `${hours}:${minutes}:${seconds}`;
-  document.getElementById("clock").textContent = timeString;
+
+  if (clock) {
+    document.getElementById("clock").textContent = timeString;
+  } else {
+    console.error("Clock not found!");
+  }
 }
 
 updateClock();
