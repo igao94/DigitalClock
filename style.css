@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-#clock-container {
+.clock-container {
   display: flex;
   justify-content: center;
   align-items: center;
